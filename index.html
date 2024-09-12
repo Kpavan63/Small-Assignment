@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link to Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <title>Zales India</title>
+  <style>
+    /* Common styles for all screen sizes */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  section {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .hero {
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Add background animation to the body */
+  body {
+    animation: changeBackgroundColor 10s infinite alternate;
+  }
+  
+  @keyframes changeBackgroundColor {
+    0% {
+      background-color: #4CAF50;
+    }
+    100% {
+      background-color: #3498db;
+    }
+  }
+  
+  /* Responsive styles for different screen sizes */
+  
+  /* Desktop styles */
+  @media only screen and (min-width: 1024px) {
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px; /* Adjust as needed */
+      margin: 0 auto; /* Center the content horizontally */
+    }
+  
+    .hero-text {
+      width: 100%;
+      text-align: left;
+      font-size: 30px;
+      margin-top: 100px;
+      margin-left: 200px;
+    }
+  
+    .hero-image {
+      width: 100%;
+    }
+  
+    .hero-image img {
+      max-width: 100%;
+      height: 500px;
+      margin-left: 150px;
+      animation:fadeInLeftBig; 
+      animation-duration: 2s;
+    }
+    .pk{
+      animation:fadeInRightBig;
+  animation-duration: 2s;
+    }
+    .title-z{
+      width: 500px;
+      animation:fadeInUpBig; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 2s;
+    }
+    .paa{
+      font-size: 20px;
+      text-align: center;
+      margin-top: -20px;
+    }
+    .logo{
+      font-size: 40px;
+      margin-left:30px ;
+      font-weight: bold;
+      background-image: url('https://i.gifer.com/origin/0a/0a7e42efcf96194fac5f46d73361cc20_w200.webp');
+      background-size: cover;
+      background-position: center;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .links{
+      margin-top: 50px;
+      margin-left: 50px;
+      animation:tada; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 2s;
+    }
+    .btn{
+      text-decoration: none;
+      color: white;
+      background-color: #333;
+      padding: 8px 30px;
+      text-align: center;
+      border-radius: 12px;
+      font-size: 20px;
+      transition: box-shadow 1s;
+    
+    }
+    .btn:hover{
+      box-shadow: 10px 10px 10px 0 black;
+    }
+    .about-img{
+      display: none;
+    }
+    .about-content{
+      margin-top: 50px;
+      text-align: center;
+      font-family: monospace;
+      position: relative;
+  
+    }
+    .color-1{
+      background-color: #ffffff;
+      width: 100%;
+      border-radius: 12px;
+    }
+    .bo{
+      margin-left: 400px;
+      font-size: 40px;
+    }
+    .bo-{
+      font-size: 40px;
+      margin-left: 200px;
+    }
+   .bo+{
+    font-size: 40px;
+      margin-left: 200px;
+   }
+    .about-pp{
+      margin-left: -700px;
+      width:100% auto;
+      height: 500px;
+      margin-top: -100px;
+      animation:fadeInLeftBig; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 2s;
+      
+    }
+    .right-z{
+      font-size: 30px;
+    
+    }
+    .right{
+      position: absolute;
+      left:500px;
+      top: 100px;
+      right: 0;
+      width: 500px;
+    }
+    .cards{
+      display: flex;
+      gap: 5px;
+    }
+    .card:hover{
+      box-shadow:  10px 10px 10px 0 black;
+    }
+    .card {
+      width: 310px;
+      transition: box-shadow 1s;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      border:2px solid #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100px;
+      margin-left:100px;
+      margin-top: 10px;
+    }
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .card-description {
+      font-size: 16px;
+      color: #666;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .services-content{
+      margin-top: 300px;
+    }
+    .contect-content{
+      margin-top: 700px;
+    }
+    .container {
+      width: 600px;
+      margin:50px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      margin-bottom: 16px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+    footer{
+      margin-top: 400px;
+    }
+  }
+  /* Tablet styles */
+  @media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .hero {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .hero-text,
+    .hero-image {
+      width: 100%;
+    }
+  }
+  
+  /* Smartphone styles */
+  @media only screen and (max-width: 767px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      height: 100px;
+      color: #333;
+      backdrop-filter: blur(12px);
+    }
+    .logo{
+      font-size: 40px;
+      font-weight: bold;
+      animation: changeBackgroundColor 10s infinite alternate;
+      background-size: cover;
+      background-position: center;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    nav ul {
+      margin-top: 10px;
+      margin-left: -49px;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin: 7px;
+    }
+  
+    .hero {
+      padding: 30px; /* Add padding for better readability on small screens */
+    }
+    .hero-text{
+      font-size: 25px;
+      margin-top: 170px;
+      width: 100%;
+    }
+    .title-z{
+      width: 500px;
+      font-size: 30px;
+      margin-top: -90px;
+    }
+    .paa{
+      font-size: 20px;
+      text-align: center;
+      margin-top: -20px;
+    }
+    .pk{
+      display: none;
+    }
+    .links{
+      position: absolute;
+      top:650px;
+      right: 0px;
+      margin-right: 10px;
+    }
+    .btn{
+      text-decoration: none;
+      color: white;
+      background-color: #333;
+      padding: 8px 30px;
+      text-align: center;
+      border-radius: 12px;
+      font-size: 20px;
+      transition: box-shadow 1s;
+    }
+    .btn:hover{
+      box-shadow: 10px 10px 10px 0 black;
+    }
+    .about-content{
+      text-align: center;
+      margin-top: 250px;
+    }
+    .services-content{
+      text-align: center;
+      margin-top: 1100px;
+    }
+    .bo,.bo-{
+      text-align: center;
+      font-size: 5px;
+      margin-top: 0px;font-size: 40px;
+    }
+    .about-img{
+      width: 100%;
+      border-radius: 12px;
+      background-color: transparent;
+    }
+    .about-pp{
+      display: none;
+    }
+    .right-z{
+      font-size: 20px;
+      margin-top: -30px;
+      font-family: monospace;
+    }.card {
+      max-width: 300px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      border:2px solid #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100px;
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .card-description {
+      font-size: 16px;
+      color: #666;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .contect-content{
+      margin-top: 1900px;
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      margin-bottom: 16px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+    footer{
+      margin-top: 900px;
+    }
+  } 
+
+  
+  
+ 
+</style>
+</head>
+
+<body id="page">
+
+  <header>
+    <div class="logo"><font class="logo">Zales India</font></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="animated fadeIn">
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="title-z">Welcome to Zales India</h1>
+        <p class="paa">Your gateway to innovative solutions</p>
+        <div class="links">
+        <a href="#" class="btn">Get Started</a>&nbsp;&nbsp;
+        <a href="#" class="btn"> Book Webinor</a>
+      </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://assets-global.website-files.com/5e51b3b0337309d672efd94c/5e535268258ffebd1d8fff6f_mix-5.svg" alt="Welcome Image">
+      </div>
+      <img src="https://assets-global.website-files.com/5e51b3b0337309d672efd94c/5e535268258ffe32dc8fff6e_mix-2.svg" alt="" class="pk">
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="color-1">
+    <div class="about-content">
+      <h2 class="bo-">About Us</h2>
+      <img src="https://assets-global.website-files.com/5e51c674258ffe10d286d30a/5e535c92c67e790fd496656f_peep-94.svg" alt="" class="about-pp">
+      <img src="https://assets-global.website-files.com/5e51c674258ffe10d286d30a/5e535c92c67e790fd496656f_peep-94.svg" alt="" class="about-img">
+      <div class="right">
+      <p class="right-z">Zales India stands as a beacon of elegance, offering a curated collection of timeless jewelry that seamlessly blends tradition with contemporary design</p>
+    </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="services">
+    <div class="services-content">
+      <h2 class="bo">Services</h2>
+      <div class="cards">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/9746/9746772.png" alt="Zales India Services" class="card-imgp">
+        <div class="card-content">
+          <h2 class="card-title">Zales India Services</h2>
+          <p class="card-description">Experience unparalleled craftsmanship and personalized elegance with Zales India's exceptional range of fine jewelry services, blending tradition and innovation.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/3631/3631163.png" alt="Zales India Services" class="card-imgp">
+        <div class="card-content">
+          <h2 class="card-title">Zales India Services</h2>
+          <p class="card-description">Experience unparalleled craftsmanship and personalized elegance with Zales India's exceptional range of fine jewelry services, blending tradition and innovation.</p>
+        </div>
+      </div><div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/3852/3852620.png" alt="Zales India Services" class="card-imgp">
+        <div class="card-content">
+          <h2 class="card-title">Zales India Services</h2>
+          <p class="card-description">Experience unparalleled craftsmanship and personalized elegance with Zales India's exceptional range of fine jewelry services, blending tradition and innovation.</p>
+        </div>
+      </div>
+    </div><div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/128/3715/3715079.png" alt="Zales India Services" class="card-imgp">
+      <div class="card-content">
+        <h2 class="card-title">Zales India Services</h2>
+        <p class="card-description">Experience unparalleled craftsmanship and personalized elegance with Zales India's exceptional range of fine jewelry services, blending tradition and innovation.</p>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </section>
+<br>
+<section id="contact">
+  <div class="contect-content">
+    <h2 class="bo+">Contact Us</h2>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+  
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  </div>
+</section>
+
+  <script>
+    // Add smooth scrolling behavior to navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  <footer>
+    All copy rights are reserved &copy;2024 Zales india
+  </footer>
+</body>
+</html>
